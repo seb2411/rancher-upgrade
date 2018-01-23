@@ -14,7 +14,6 @@ RANCHER_URL          | Yes      | http(s)://[url]/v2-beta/projects/[environment_
 RANCHER_STACK_ID     | Yes      | 1st95
 RANCHER_ACCESS_KEY   | Yes      | From Environment API Keys
 RANCHER_SECRET_KEY   | Yes      | From Environment API Keys
-RANCHER_SERVICE_NAME | Yes      | -
 RANCHER_STACK_NAME   | Yes      | -
 
 ## Example:
@@ -25,5 +24,6 @@ RANCHER_STACK_NAME   | Yes      | -
   -e RANCHER_STACK_ID=$RANCHER_STACK_ID \
   -e RANCHER_ACCESS_KEY=$RANCHER_ACCESS_KEY \
   -e RANCHER_SECRET_KEY=$RANCHER_SECRET_KEY \
+  -e RANCHER_STACK_NAME=$RANCHER_STACK_NAME \
   registry.gitlab.com/seb2411/rancher-upgrade:latest ./upgrade.sh
 ```

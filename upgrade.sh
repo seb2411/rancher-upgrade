@@ -10,10 +10,10 @@ rm config.zip
 
 # Do Upgrade
 echo ""
-echo "-> Updating service $RANCHER_SERVICE_NAME on $RANCHER_STACK_NAME"
+echo "-> Updating service on $RANCHER_STACK_NAME"
 rancher-compose -p $RANCHER_STACK_NAME up \
     --force-upgrade \
     --confirm-upgrade \
     --pull \
     --batch-size "1" \
-    -d $RANCHER_SERVICE_NAME
+    -d
