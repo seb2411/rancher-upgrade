@@ -18,6 +18,8 @@ RANCHER_STACK_NAME   | Yes      | -
 
 ## Example:
 
+#### Image from Gitlab repository:
+
 ```bash
  docker run --rm \
   -e RANCHER_URL=$RANCHER_URL \
@@ -26,4 +28,16 @@ RANCHER_STACK_NAME   | Yes      | -
   -e RANCHER_SECRET_KEY=$RANCHER_SECRET_KEY \
   -e RANCHER_STACK_NAME=$RANCHER_STACK_NAME \
   registry.gitlab.com/seb2411/rancher-upgrade:latest ./upgrade.sh
+```
+
+#### Image from Docker Hub repository:
+
+```bash
+ docker run --rm \
+  -e RANCHER_URL=$RANCHER_URL \
+  -e RANCHER_STACK_ID=$RANCHER_STACK_ID \
+  -e RANCHER_ACCESS_KEY=$RANCHER_ACCESS_KEY \
+  -e RANCHER_SECRET_KEY=$RANCHER_SECRET_KEY \
+  -e RANCHER_STACK_NAME=$RANCHER_STACK_NAME \
+  seb24/rancher-service-upgrade:latest ./upgrade.sh
 ```
